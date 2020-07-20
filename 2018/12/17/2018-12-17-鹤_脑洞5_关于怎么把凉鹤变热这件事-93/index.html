@@ -60,11 +60,43 @@
 
 </head>
 
-<body>
-  <div id="container" q-class="show:isCtnShow">
-    <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
-      
+    <body>
+
+        <!-- 20200721 hxx《添加--APlayer音乐播放器,详见: https://aplayer.js.org/#/zh-Hans/ -->
+        
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+
+            <div id="aplayer" style="text-align:left;z-index: 10;"></div>
+            <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js"></script>
+
+            <!-- 为方便修改，添加一个配置文件，修改时直接修改配置文件即可。 -->
+            <script type="text/javascript" src="/js/APlayer_config.js"></script>
+
+            <!-- 根据封面自适应主题色，主要是作用于进度条 -->
+            <script type="text/javascript">
+                const colorThief = new ColorThief();
+                const setTheme = (index) => {
+                    if (!ap.list.audios[index].theme) {
+                        colorThief.getColorAsync(ap.list.audios[index].cover, function(color) {
+                            ap.theme(`rgb(${color[0]}, ${color[1]}, ${color[2]})`, index);
+                        });
+                    }
+                };
+                setTheme(ap.list.index);
+                ap.on('listswitch', (data) => {
+                    setTheme(data.index);
+                });
+            </script>
+            
+                <!-- 添加--APlayer音乐播放器》 -->
+
+
+
+                <div id="container" q-class="show:isCtnShow">
+                    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+                    <div class="left-col" q-class="show:isShow">
+                        
 
 
 <div class="overlay" style="background: #4d4d4d;background: url('/img/biu3.gif') no-repeat ;"></div>
@@ -121,16 +153,15 @@
 	</header>		
 </div>
 
-    </div>
-    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
-      
-      
-      <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" 
-        href="https://github.com/yagamihikari" target="_blank">
+                    </div>
+                    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+                        
+                            
+                                <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em;" href="https://github.com/yagamihikari" target="_blank">
         <img src="/img/forkme.png"
           class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-      
-      
+                                
+                                    
 <nav id="mobile-nav">
   	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
 	<div class="btnctn js-mobile-btnctn">
@@ -196,14 +227,13 @@
 	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
 </nav>
 
-      <div id="wrapper" class="body-wrap">
-        <div class="menu-l">
-          <div class="canvas-wrap">
-            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1"
-              class="anm-canvas"></canvas>
-          </div>
-          <div id="js-content" class="content-ll">
-            <article id="post-2018-12-17-鹤_脑洞5_关于怎么把凉鹤变热这件事-93" class="article article-type-post " itemscope itemprop="blogPost">
+                                        <div id="wrapper" class="body-wrap">
+                                            <div class="menu-l">
+                                                <div class="canvas-wrap">
+                                                    <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+                                                </div>
+                                                <div id="js-content" class="content-ll">
+                                                    <article id="post-2018-12-17-鹤_脑洞5_关于怎么把凉鹤变热这件事-93" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -528,10 +558,10 @@
 
 
 
-          </div>
-        </div>
-      </div>
-      <footer id="footer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
@@ -549,8 +579,8 @@
   
 </footer>
 
-    </div>
-    <script>
+                    </div>
+                    <script>
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
@@ -611,7 +641,7 @@
 </script>
 
 
-    
+                        
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
     
@@ -667,22 +697,6 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">巫师兽</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">迪路兽</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">冰见友树</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">神原拓也</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">太娜</a>
               </li>
              
@@ -704,6 +718,22 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">石田大和</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">冰见友树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">神原拓也</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">巫师兽</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">迪路兽</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -775,15 +805,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">刀剑乱舞</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">亚古兽</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">太古</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">刀剑乱舞</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -819,6 +849,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">鹤丸国永与历史</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">鹤丸浏览器</a>
               </li>
              
@@ -827,19 +861,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">鹤丸国永与历史</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">梦鹤</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">鹤与雪</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">糖葫芦鹤婶</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -852,6 +878,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">圣诞快乐</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">糖葫芦鹤婶</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -954,7 +984,7 @@
   </div>
   
 </div>
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+                            <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
     <!-- Background of PhotoSwipe. 
@@ -1020,10 +1050,10 @@
     </div>
 
 </div>
-  </div>
+                </div>
 
-  
-  
+                
+                    
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
 <script>
   POWERMODE.colorful = true; // make power mode colorful
@@ -1031,21 +1061,21 @@
   document.body.addEventListener('input', POWERMODE);
 </script>
 
-  
-  <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
-  
-  
-  
-  <script type="text/javascript" src="/lib/snow.js"></script>
-  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
-  <script>
-    snow.down();
-    $(window).resize(function() {
-      $("canvas").css("z-index","500").remove();
-      snow.down();
-    });
-  </script>
-  
-</body>
+                        
+                            <!-- <script async type="text/javascript" size="90" alpha="0.2" zIndex="0" src="/plugins/ribbon.js/ribbon.min.js"></script> -->
+                            
+                                
+                                            
+                                                <script type="text/javascript" src="/lib/snow.js"></script>
+                                                <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+                                                <script>
+                                                    snow.down();
+                                                    $(window).resize(function() {
+                                                        $("canvas").css("z-index", "500").remove();
+                                                        snow.down();
+                                                    });
+                                                </script>
+                                                
+    </body>
 
 </html>

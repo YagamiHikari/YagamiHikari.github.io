@@ -4094,3 +4094,9 @@ a.pswp__share--download:hover {
     -webkit-transition: width .3s ease;
     transition: width .3s ease
 }
+
+@media screen and (max-width: 800px) {
+    .aplayer {
+        opacity: 0.8;
+    }
+}
