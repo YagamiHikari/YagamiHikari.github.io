@@ -47,11 +47,32 @@ const ap = new APlayer({
             url: '/music/lrc/中山真斗 (なかやま まさと) - 手つかずの感情 (未曾经历的感情).mp3'
         },
         {
-            name: 'Because Of You',
-            artist: 'Ne-Yo',
-            lrc: '/music/lrc/Ne-Yo - Because Of You.lrc',
-            cover: '/music/lrc/Ne-Yo - Because Of You.jpg',
-            url: '/music/lrc/Ne-Yo - Because Of You.mp3'
+            name: 'アゲイン (Again)',
+            artist: '横山克',
+            lrc: '/music/lrc/横山克 (よこやま まさる) - アゲイン (Again).lrc',
+            cover: '/music/lrc/横山克 (よこやま まさる) - アゲイン (Again).jpg',
+            url: '/music/lrc/横山克 (よこやま まさる) - アゲイン (Again).mp3'
+        },
+        {
+            name: '春弦',
+            artist: '塞壬唱片-MSR _ 横山克',
+            lrc: '/music/lrc/塞壬唱片-MSR _ 横山克 (よこやま まさる) - 春弦.lrc',
+            cover: '/music/lrc/塞壬唱片-MSR _ 横山克 (よこやま まさる) - 春弦.jpg',
+            url: '/music/lrc/塞壬唱片-MSR _ 横山克 (よこやま まさる) - 春弦.mp3'
+        },
+        {
+            name: '酒香剑舞灯影斜',
+            artist: '张岩',
+            lrc: '/music/lrc/张岩 - 酒香剑舞灯影斜.lrc',
+            cover: '/music/lrc/张岩 - 酒香剑舞灯影斜.jpg',
+            url: '/music/lrc/张岩 - 酒香剑舞灯影斜.mp3'
+        },
+        {
+            name: '飛花落葉',
+            artist: 'KENN',
+            lrc: '/music/lrc/KENN (ケン) - 飛花落葉.lrc',
+            cover: '/music/lrc/KENN (ケン) - 飛花落葉.jpg',
+            url: '/music/lrc/KENN (ケン) - 飛花落葉.mp3'
         }
     ]
 });
