@@ -29,22 +29,29 @@ const ap = new APlayer({
             name: '好きでした。 (曾经喜欢过。)',
             artist: '横山克',
             lrc: '/music/lrc/横山克 (よこやま まさる) - 好きでした。 (曾经喜欢过。).lrc',
-            cover: '横山克 (よこやま まさる) - 好きでした。 (曾经喜欢过。).jpg',
-            url: '横山克 (よこやま まさる) - 好きでした。 (曾经喜欢过。).mp3'
+            cover: '/music/lrc/横山克 (よこやま まさる) - 好きでした。 (曾经喜欢过。).jpg',
+            url: '/music/lrc/横山克 (よこやま まさる) - 好きでした。 (曾经喜欢过。).mp3'
         },
         {
             name: 'ヒカリ断ツ雨',
             artist: '斉藤壮馬',
             lrc: '/music/lrc/斉藤壮馬 (さいとう そうま) - ヒカリ断ツ雨.lrc',
-            cover: '斉藤壮馬 (さいとう そうま) - ヒカリ断ツ雨.jpg',
-            url: '斉藤壮馬 (さいとう そうま) - ヒカリ断ツ雨.mp3'
+            cover: '/music/lrc/斉藤壮馬 (さいとう そうま) - ヒカリ断ツ雨.jpg',
+            url: '/music/lrc/斉藤壮馬 (さいとう そうま) - ヒカリ断ツ雨.mp3'
         },
         {
-            name: 'どれだけ希望を持ったのか (怀有多少希望)',
+            name: '手つかずの感情 (未曾经历的感情)',
             artist: '中山真斗',
-            lrc: '/music/lrc/中山真斗 (なかやま まさと) - どれだけ希望を持ったのか (怀有多少希望).lrc',
-            cover: '中山真斗 (なかやま まさと) - どれだけ希望を持ったのか (怀有多少希望).jpg',
-            url: '中山真斗 (なかやま まさと) - どれだけ希望を持ったのか (怀有多少希望).mp3'
+            lrc: '/music/lrc/中山真斗 (なかやま まさと) - 手つかずの感情 (未曾经历的感情).lrc',
+            cover: '/music/lrc/中山真斗 (なかやま まさと) - 手つかずの感情 (未曾经历的感情).jpg',
+            url: '/music/lrc/中山真斗 (なかやま まさと) - 手つかずの感情 (未曾经历的感情).mp3'
+        },
+        {
+            name: 'Because Of You',
+            artist: 'Ne-Yo',
+            lrc: '/music/lrc/Ne-Yo - Because Of You.lrc',
+            cover: '/music/lrc/Ne-Yo - Because Of You.jpg',
+            url: '/music/lrc/Ne-Yo - Because Of You.mp3'
         }
     ]
 });
